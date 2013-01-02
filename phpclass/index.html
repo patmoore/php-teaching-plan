@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Understanding</title>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+</head>
+<body>
+<div id="impress">
+    <div id="yes-you-can" class="step slide" data-x="-1000" data-y="-1500">
+        <ul>
+            <li>Process</li>
+            <li>Tools</li>
+            <li>Starting Points</li>
+        </ul>
+    </div>
+    <div id="process" class="step" data-x="-1000" data-y="-1500" data-z="-10000">
+        <!--Proper process to avoid getting lost-->
+        <h1>Process</h1>
+        <ol>
+            <li>Document</li>
+            <li>Review</li>
+            <li>Escape</li>
+        </ol>
+    </div>
+    <div id="document" class="step" data-x="1000" data-y="-1000" data-z="1000">
+        Lay bread crumbs
+    </div>
+    <div id="review" class="step" data-x="500" data-y="-1000" data-z="1000">
+        How did I get here?
+    </div>
+    <div id="escape" class="step" data-x="0" data-y="-1000" data-z="1000">
+        Always leave a way out
+    </div>
+   
+    <div id="where-debugging" class="step">
+        <h1>Remote</h1>
+        <h1>Local</h1>
+    </div>
+
+    <!-- ============================= -->
+    <!-- Remote debugging -->
+    <!-- ============================= -->
+    <div id="remote-debugging" class="step">
+        Lesson #1 : Remote Debugging
+        Dangerous
+        Visible
+        Limited
+        No experimenting allowed
+        Possible attack vectors
+        Putting site back together
+    </div>
+
+    <!-- put process slide as the next step -->
+
+    <div id="when-remote-debugging" class="step slide">
+        <h1>When is remote debugging o.k.</h1>
+        <ul>
+            <li>White screen of death</li>
+            <li>Triage</li>
+            <li>Quick fix</li>
+        </ul>
+    </div>
+
+    <div id="safe-debugging" class="step slide">
+        WordPress Constants
+        Debug Bar Plugin
+    </div>
+
+    <div id="wp-constants" class="step slide">
+        Into wp-config.php
+        <code>
+        <pre>
+// PAT: BEGIN HACK Added 26 Dec 2012 to debug whitescreen of death
+define('WP_DEBUG', true);
+if(!defined('DOING_AJAX') && !defined('DOING_CRON') ) {
+    define('WP_DEBUG_DISPLAY', true); // true = Turn forced display ON
+}
+define('WP_DEBUG_LOG',     true);  // Turn on logging to wp-content/debug.log
+// PAT: END HACK
+        </pre>
+        </code>
+    </div>
+    <div id="using-wp-constants" class="step slide">
+        wp-content/debug.log
+        @error_log("message");
+    </div>
+    <div id="wp-debug-bar" class="step slide">
+        Awesome Debug Bar
+        Can turn on off
+        <a href="http://wordpress.org/extend/plugins/debug-bar/">Debug Bar</a>
+        <a href="http://wordpress.org/extend/plugins/debug-bar-cron/">Cron</a>
+        <a href="http://wordpress.org/extend/plugins/debug-bar-action-hooks/">Action Hooks</a>
+        <a href="http://wordpress.org/extend/plugins/debug-bar-extender/">Extender</a>
+        <a href="http://wordpress.org/extend/plugins/tdd-debug-bar-post-meta/">Post Meta</a>
+        <a href="http://wordpress.org/extend/plugins/debug-bar-transients/">Transients</a>
+        <a href="http://wordpress.org/extend/plugins/debug-bar-super-globals/">Super Globals</a>
+        <a href="http://wordpress.org/extend/plugins/debug-bar-query-tracer/">Query Tracer</a>
+        <a href="http://wordpress.org/extend/plugins/debug-bar-template-trace/">Template Trace</a>
+        <a href="http://wordpress.org/extend/plugins/debug-bar-console/">Console</a>
+        <a href="http://wordpress.org/extend/plugins/debug-bar-query-tracer/">Query Tracer</a>
+    </div>
+    <div id="end-remote-debugging" class="step slide">
+        Do not attempt anything else remotely.
+        Put everything back
+        Verify site
+    </div>
+
+    <!-- ============================= -->
+    <!-- Local debugging -->
+    <!-- ============================= -->
+    <div id="local-debugging" class="step slide">
+        Lesson #2 : Remote Debugging
+ (some picture to show copying of files to local machine )
+        Why?
+        Step up in skills
+           learn PHP and wordpress guts
+        Tools
+        Techniques
+        Guts
+    </div>
+
+    <div id="tools" class="step">
+        <h1>XAMPP</h1>
+        <h1>Eclipse</h1>
+        <h1>git</h1>
+    </div>
+
+    <div id="xampp" class="step">
+         Environment 
+         Only needed for Windows
+         Mysql
+         PHP
+         PHPMySqlAdmin
+         Apache
+         Stop and test
+    </div>
+
+    <div id="eclipse" class="step">
+         <a href="http://poweredbypulse.com">Eclipse  (poweredbypulse)</a>
+                 (install plugins )
+         <a href="java.oracle.com>Java</a>
+         Put debug flag in
+    </div>
+
+    <div id="quick-git" class="step">
+        <ol>
+            <li>git init</li>
+            <li>(create temporary file)</li>
+            <li>git checkout -b example.com</li>
+        </ol>
+    </div>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) {
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<project default="copy-impress-js">
+    <dirname property="root-dir" file="." />
+    <target name="copy-impress-js">
+         <copy todir="phpclass/js">
+             <fileset dir="${root-dir}/jsprojects/impress.js/js"/>
+         </copy>
+         <copy todir="phpclass/css">
+             <fileset dir="${root-dir}/jsprojects/impress.js/css"/>
+         </copy>
+    </target>
+</project>
+
