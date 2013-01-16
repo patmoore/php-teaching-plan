@@ -1,0 +1,20 @@
+sql database
+ftp
+kk
+
+Lesson #1 : White screen of death - bad plugins and fighting plugins
+Key Wordpress Environment Variables
+Understanding error messages
+Finding what you need to report plugin issues well
+Lesson #2: Using the Debug Bar Plugin and @error_log
+to spot problems
+to learn wordpress internals:
+actions and filters
+Lesson #3: Resources and homework
+php.net
+codex.wordpress.org
+Lesson #4: Who moved my cheese - did the customer change the website? (time permitting)
+PhpMysqlAdmin
+fireftp
+git
+introduction to advanced debugging

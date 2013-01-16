@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Understanding</title>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+</head>
+<style>
+.step .center {
+  vertical-align: middle;
+}
+.circle {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px; 
+  background-color: green;
+  position:relative;
+  /* width and height can be anything, as long as they're equal */
+}
+.circle .text {
+  text-align:center;
+  vertical-align:middle;
+  color:white;
+  font-size:150px;
+  position: relative;
+  top: 10%;
+}
+.step div,.step img,.step h1 {
+text-align: center;
+}
+
+.step .inline {
+display:inline-block;
+margin-left: auto;   margin-right: auto; 
+}
+.hid {
+  display:none;
+}
+
+.step code {
+  font-size: 24px;
+  font-family: Courier New;
+}
+.big {
+    display: block;
+    font-size: 250px;
+    line-height: 250px;
+}
+
+.big .thoughts {
+    font-size: 90px;
+    line-height: 150px;
+}
+
+
+</style>
+<body>
+<div id="impress">
+    <div id="who-am-i" class="step" data-x="-10000" data-y="-2000">
+        <div class="center"><img class="inline" src="img/who-am-i.jpg"/></div>
+        <div>PatMoore@FarReach.es</div>
+        <div style="font-size:smaller">650-207-9792</div>
+        <div>Try our <a href="http://farreach.es/">Social Marketing Management Plugin</a></div>
+    </div>
+    <div id="lost" class="step" data-x="-10000" data-y="-1000" data-z="0">
+        <img src="img/how-did-i-get-here.jpg"/>
+    </div>
+    <div id="fear" class="step" data-x="-10000" data-y="0" data-z="0">
+        <img src="img/no-diving-sign.jpg"/>
+    </div>
+    <div id="yes-I-can" class="step" data-x="0" data-y="0" data-z="0">
+        <h1>sí, puedo</h1>
+    </div>
+    <div id="checklist" class="step" data-x="1000" data-y="0" data-z="0">
+        <div class="center">
+        <ol>
+            <li>Process</li>
+            <li>Tools</li>
+            <li>Starting Points</li>
+        </ol>
+        </div>
+    </div>
+    <div id="first-step" class="step" data-x="2000" data-y="0" data-z="0">
+        <div class="circle"><div class="text">1</div></div>
+        <div>Process</div>
+    </div>
+    <div id="document" class="step" data-x="3000" data-y="0" data-z="-5000">
+        <!-- document every thing -->
+        <img src="img/A-hardback-notebook.jpg"/>
+    </div>
+    <div id="map" class="step" data-x="4000" data-y="0" data-z="-5000">
+        <!--road map gets you there and back home -->
+        <img src="img/roadmap.jpg"/>
+    </div>
+    <div id="exit" class="step" data-x="5000" data-y="0" data-z="-5000">
+        <!-- exit plan ( this is why you document)  -->
+        <img src="img/emergency-exit.jpg"/>
+    </div>
+    <div id="stop" class="step" data-x="6000" data-y="0" data-z="-5000">
+        <!-- decide when you should STOP -->
+        <img src="img/emergency-stop.jpg"/>
+    </div>
+   
+    <div id="where-debugging" class="step" data-x="7000" data-z="-5000">
+        <div class="center inline">
+        <div>Local</div>
+        <div>vs.</div>
+        <div>Remote</div>
+        </div>
+    </div>
+
+    <div id="local-debugging" class="step" data-x="8000" data-z="-5000">
+        <!-- Experimenting -->
+        <img src="img/Mad_scientist.svg"/>
+    </div>
+    <!-- ============================= -->
+    <!-- Remote debugging -->
+    <!-- ============================= -->
+    <div id="remote-debugging" class="step" data-x="9000" data-z="-5000">
+        <img src="img/driving-in-fog.jpg"/>
+<!--
+        <h1>Remote Debugging</h1>
+        <ul>
+        <li>Dangerous</li>
+        <li>Visible</li>
+        <li>Limited</li>
+        <li>No experimenting allowed</li>
+        <li>Possible attack vectors</li>
+        <li>Putting site back together</li>
+        </ul>
+-->
+    </div>
+
+    <div id="when-remote-debugging" class="step" data-x="10000" data-y="000" data-z="-5000">
+        <div class="center inline">
+        <h1>When is remote debugging o.k.</h1>
+        <ul>
+            <li>WSOD</li>
+            <li>Triage</li>
+            <li>Quick fix</li>
+        </ul>
+        </div>
+    </div>
+
+    <div id="second-step" class="step" data-x="2000" data-y="1000" data-z="0">
+        <div class="center"><div class="circle"><div class="text">2</div></div>
+        Tools</div>
+    </div>
+    <div id="tools" class="step slide" data-x="3000" data-y="1000" data-z="-5000">
+        <img src="img/tools.jpg"/>
+        <div class="center">
+        <ol>
+            <li>PHPMysqlAdmin</li>
+            <li><a href="http://fireftp.mozdev.org/">FireFtp</a></li>
+            <li><a href="http://git-scm.com">git</a></li>
+            <li>WordPress Constants</li>
+            <li>Debug Bar Plugin ( and its plugins )</li>
+        </ol>
+        </div>
+    </div>
+    <div id="resources" class="step slide" data-x="4000" data-y="1000" data-z="-5000">
+        <div class="center">Resources
+        <ul>
+            <li><a href="http://codex.wordpress.org">http://codex.wordpress.org</a></li>
+            <li><a href="http://php.net">http://php.net</a></li>
+        </ul>
+        </div>
+    </div>
+
+    <div id="third-step" class="step" data-x="2000" data-y="2000" data-z="000">
+        <div class="circle"><div class="text">3</div></div>
+        <div>Start Here</div>
+    </div>
+    <div id="before-changes" class="step" data-x="5000" data-y="2000" data-z="-5000">
+        <div class="center big">BACKUP</div>
+    </div>
+    <div id="before-changes" class="step" data-x="5000" data-y="2000" data-z="-5000">
+        <div class="center">
+            <ol>
+                <li>ftp</li>
+                <li>sql</li>
+                <li>git</li>
+            </ol>
+        </div>
+    </div>
+    <div id="wp-debug" class="step slide" data-x="7000" data-y="2000" data-z="-5000">
+        <div>wp-config.php</div>
+        <code>
+        <pre>
+// PAT: BEGIN HACK Added 26 Dec 2012
+define('WP_DEBUG', true);
+if(!defined('DOING_AJAX') && !defined('DOING_CRON') ) {
+       // true =Turn forced display ON
+    define('WP_DEBUG_DISPLAY', true);
+}
+   // logging to wp-content/debug.log
+define('WP_DEBUG_LOG', true);
+   // query logging (slows things down)
+define('SAVEQUERIES',  true);
+   // use debug versions of javascripts
+define('SCRIPT_DEBUG', true);
+// PAT: END HACK
+        </pre>
+        </code>
+    </div>
+    <div id="wsod" class="step" data-x="10000" data-y="2000" data-z="-5000">
+        <div class="center">WSOD</div>
+        <div class="center"><img src="img/know-your-enemy.jpg"/></div>
+    </div>
+    <div id="php" class="step" data-x="9000" data-y="3000" data-z="-5000">
+        <div class="center">Syntax Errors
+        <code>
+             Fatal error: Call to undefined function hi() in wordpress/wp-admin/index.php on line 13
+        </code>
+        </div>
+    </div>
+    <div id="php-version" class="step" data-x="10000" data-y="3000" data-z="-5000">
+        <div class="center">
+            <div>older version of PHP</div>
+        </div>
+    </div>
+    <div id="php-conflicts" class="step" data-x="11000" data-y="3000" data-z="-5000">
+        <div class="center">Conflicts ( bad naming )
+        <code>
+             Fatal error: Cannot redeclare .....
+        </code>
+        </div>
+    </div>
+<!--
+    <div id="demo-debug-1" class="step" data-x="10000" data-y="5000" data-z="-5000">
+        <div class="center">
+            Demo
+        </div>
+    </div>
+-->
+    <div id="wp-debug-bar" class="step" data-x="0" data-y="10000" data-z="000">
+        <div><a href="http://wordpress.org/extend/plugins/debug-bar/">Debug Bar</a></div>
+        <ul style="font-size:smaller">
+        <li><a href="http://wordpress.org/extend/plugins/debug-bar-cron/">Cron</a></li>
+        <li><a href="http://wordpress.org/extend/plugins/debug-bar-action-hooks/">Action Hooks</a></li>
+        <li><a href="http://wordpress.org/extend/plugins/debug-bar-extender/">Extender</a></li>
+        <li><a href="http://wordpress.org/extend/plugins/tdd-debug-bar-post-meta/">Post Meta</a></li>
+        <li><a href="http://wordpress.org/extend/plugins/debug-bar-transients/">Transients</a></li>
+        <li><a href="http://wordpress.org/extend/plugins/debug-bar-super-globals/">Super Globals</a></li>
+        <li><a href="http://wordpress.org/extend/plugins/debug-bar-query-tracer/">Query Tracer</a></li>
+        <li><a href="http://wordpress.org/extend/plugins/debug-bar-template-trace/">Template Trace</a></li>
+        <li><a href="http://wordpress.org/extend/plugins/debug-bar-console/">Console</a></li>
+        <li><a href="http://wordpress.org/extend/plugins/debug-bar-query-tracer/">Query Tracer (broken)</a> <a href="https://github.com/patmoore/debug-bar-query-tracer">fixed</a></li>
+        </ul>
+        <div class="center" style="font-size:small">
+        <a href="http://example.com/wordpress/wp-admin/plugins.php">example (running locally)</a>
+        </div>
+    </div>
+    <div id="end-remote-debugging" class="step" data-x="3000" data-y="11000" data-z="0">
+        <div class="center big">
+        <ol>
+            <li>Do not attempt anything else remotely</li>
+            <li>Put everything back</li>
+            <li>Verify site</li>
+        </ol>
+        </div>
+    </div>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) {
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+</body>
+</html>
